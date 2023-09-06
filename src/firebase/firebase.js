@@ -3,7 +3,7 @@ import {getFirestore, collection} from 'firebase/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBLWBxf15W-edi31dDgNQL4xdDA2t246YM",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "filmyverse-45e9f.firebaseapp.com",
   projectId: "filmyverse-45e9f",
   storageBucket: "filmyverse-45e9f.appspot.com",
