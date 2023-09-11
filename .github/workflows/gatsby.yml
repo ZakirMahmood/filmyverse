@@ -1,0 +1,20 @@
+name: My Workflow
+
+on: 
+   push:
+     branches:
+       - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use the secret (REACT_APP_API_KEY)
+        env: 
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+        run: |
+          # Access the secret in your workflow
+          echo "My API key is $REACT_APP_API_KEY"
+          # You can use the API key in your commands or scripts here
